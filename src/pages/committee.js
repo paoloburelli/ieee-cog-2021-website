@@ -35,9 +35,6 @@ export default function Committee() {
           <tr></tr>
           <tr><td>Proceedings chair:</td><td>Mike Preuss</td><td>Leiden University</td></tr>
           <tr></tr>
-          <tr><td>Publicity chairs:</td><td>Mads Johansen Lassen</td><td>IT University Of Copenhagen</td></tr>
-          <tr><td></td><td>Miruna Vozaru</td><td>IT University Of Copenhagen</td></tr>
-          <tr></tr>
           <tr><td>Industry chairs:</td><td>Martin Pichlmair</td><td>IT University Of Copenhagen</td></tr>
           <tr><td></td><td>Na'Tosha Bard</td><td>KMD</td></tr>
           <tr></tr>
