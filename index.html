@@ -60,8 +60,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#dates_section">
-                        dates
+                    <a class="nav-link" href="#calendar_section">
+                        calendar
                     </a>
                 </li>
                 <li class="nav-item">
@@ -289,79 +289,76 @@
 
         </div>
 
-        <div id="dates_section" class="section wide-section dark_section" data-jq-clipthru="dark_section">
-            <h4 class="mark_aligned"><mark>Dates</mark></h4>
+        <div id="calendar_section" class="section wide-section dark_section" data-jq-clipthru="dark_section">
+            <h4 class="mark_aligned"><mark>Calendar</mark></h4>
+            <div class="progress progress-bar-vertical">
+                <div id="dates_progress" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <span class="sr-only">30% Complete</span>
+                </div>
+            </div>
 
-            <div>
-                <div class="progress progress-bar-vertical">
-                    <div id="dates_progress" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 100%;">
-                        <span class="sr-only">30% Complete</span>
+            <div class="row dates_list">
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-01-15">
+                        <p>Jan 15</p>
+                    </div>
+                    <div class="event">
+                        <p>Tutorial/special session/competition proposal deadline</p>
                     </div>
                 </div>
-
-                <div class="row dates_list">
-                    <div class="date_wrapper">
-                        <div class="bar_stroke"></div>
-                        <div class="date" data-date="2021-01-15">
-                            <p>Jan 15</p>
-                        </div>
-                        <div class="event">
-                            <p>Tutorial/special session/competition proposal deadline</p>
-                        </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-04-09">
+                        <p>Apr 9</p>
                     </div>
-                    <div class="date_wrapper">
-                        <div class="bar_stroke"></div>
-                        <div class="date" data-date="2021-04-09">
-                            <p>Apr 9</p>
-                        </div>
-                        <div class="event">
-                            <p>Full paper submission deadline</p>
-                        </div>
+                    <div class="event">
+                        <p>Full paper submission deadline</p>
                     </div>
-                    <div class="date_wrapper">
-                        <div class="bar_stroke"></div>
-                        <div class="date" data-date="2021-05-17">
-                            <p>May 17</p>
-                        </div>
-                        <div class="event">
-                            <p>Notification of acceptance</p>
-                        </div>
+                </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-05-17">
+                        <p>May 17</p>
                     </div>
-                    <div class="date_wrapper">
-                        <div class="bar_stroke"></div>
-                        <div class="date" data-date="2021-05-28">
-                            <p>May 28</p>
-                        </div>
-                        <div class="event">
-                            <p>Abstracts and auxiliary tracks paper submission deadline</p>
-                        </div>
+                    <div class="event">
+                        <p>Notification of acceptance</p>
                     </div>
-                    <div class="date_wrapper">
-                        <div class="bar_stroke"></div>
-                        <div class="date" data-date="2021-06-18">
-                            <p>Jun 18</p>
-                        </div>
-                        <div class="event">
-                            <p>Camera ready copy deadline</p>
-                        </div>
+                </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-05-28">
+                        <p>May 28</p>
                     </div>
-                    <div class="date_wrapper">
-                        <div class="bar_stroke"></div>
-                        <div class="date" data-date="2021-06-18">
-                            <p>Jun 18</p>
-                        </div>
-                        <div class="event">
-                            <p>Early bird and author registration deadline</p>
-                        </div>
+                    <div class="event">
+                        <p>Abstracts and auxiliary tracks paper submission deadline</p>
                     </div>
-                    <div class="date_wrapper">
-                        <div class="bar_stroke"></div>
-                        <div class="date" data-date="2021-08-17">
-                            <p>Aug 17</p>
-                        </div>
-                        <div class="event">
-                            <p>Conference starts!</p>
-                        </div>
+                </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-06-18">
+                        <p>Jun 18</p>
+                    </div>
+                    <div class="event">
+                        <p>Camera ready copy deadline</p>
+                    </div>
+                </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-06-18">
+                        <p>Jun 18</p>
+                    </div>
+                    <div class="event">
+                        <p>Early bird and author registration deadline</p>
+                    </div>
+                </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-08-17">
+                        <p>Aug 17</p>
+                    </div>
+                    <div class="event">
+                        <p>Conference starts!</p>
                     </div>
                 </div>
             </div>
@@ -373,8 +370,8 @@
     </main>
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
-<script src="progressbar.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="progressbar.js"></script>
 </html>

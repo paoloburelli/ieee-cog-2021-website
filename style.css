@@ -190,7 +190,8 @@ h6 strong {
 .nav-link {
     font-family: Roboto, sans-serif;
     font-variant: small-caps;
-    font-size: 1em;
+    text-transform: uppercase;
+    font-size: .8em;
     font-weight: 600;
     text-align: right;
     line-height: 1.2em;
@@ -374,7 +375,7 @@ main {
 }
 
 .calls_body p+h6 {
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
 
 .calls_body>*:last-child {
@@ -400,7 +401,6 @@ main {
 .collapsing.instant {
     -webkit-transition: none !important;
     transition: none !important;
-    display: none !important;
 }
 
 #committee_content p {
@@ -411,11 +411,6 @@ main {
     text-transform: uppercase;
     text-decoration: none;
 }
-
-/*#committee_content p strong:hover {*/
-/*    text-decoration: underline;*/
-/*    color: #ed6d6f;*/
-/*}*/
 
 #committee_content h5 {
     margin-bottom: .5em;
@@ -433,7 +428,7 @@ main {
 }
 
 .progress-bar-vertical {
-    width: 50px;
+    width: 40px;
     min-height: 51em;
     border-radius: 0;
     background-color: #ed6d6f;
@@ -459,13 +454,14 @@ main {
 }
 
 .progress-bar {
-    height: 30%;
+    height: 100%;
     background-color: #eee9d9;
 }
 
 .dates_list {
     width: calc(100% - 70px);
-    padding-left: 1em;
+    padding-left: 2em;
+    margin-bottom: 6em;
 }
 
 .date_wrapper {
@@ -486,8 +482,8 @@ main {
 
 .date_wrapper>.date>p:before {
     content: "";
-    margin-right: 1em;
-    margin-left: -1.999em;
+    margin-right: 2em;
+    margin-left: -2.999em;
     border-bottom: 1px solid #ed6d6f;
     height: 1px;
     display: inline-block;
@@ -495,13 +491,15 @@ main {
 }
 
 .date_wrapper>.date {
-    width: 25%;
+    width: 30%;
 }
 .date_wrapper>.event {
-    width: 75%;
+    width: 70%;
+    align-self: flex-start;
+    margin-top: 3.4em;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 500px) {
     .date_wrapper>.date {
         width: 20%;
     }
@@ -509,7 +507,6 @@ main {
         width: 80%;
     }
 }
-
 
 @media screen and (min-width: 992px) {
     .date_wrapper>.date {

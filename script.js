@@ -1,4 +1,3 @@
-let sidebarMenu;
 let gifPlaying = 1;
 
 function startCog() {
@@ -20,6 +19,51 @@ function checkCog() {
 	}, 4333);
 }
 
+function attempt(action, delay, attempts) {
+	if(attempts <= 0) return;
+	if(action() === false) {
+		setTimeout(function() {attempt(action, delay, --attempts);}, delay);
+	}
+}
+
+function goToSubHash(id) {
+	let elem = $(id);
+	if(elem.attr("data-toggle") === "collapse") {
+		let target = elem.attr("data-target");
+		openWithInstaClose(target, id);
+	}
+
+	return true;
+}
+
+function openWithInstaClose(target, href) {
+	let targetElem = $(target);
+	let accordion = $(target).attr("data-parent");
+	let currentOpen = $(accordion + " .collapse.show");
+
+	if (currentOpen.length === 0) {
+		location.href = href;
+		window.scrollBy(0, -30);
+		targetElem.collapse('show');
+	} else {
+		if(targetElem.hasClass("show")) { //already open
+			location.href = href;
+			window.scrollBy(0, -30);
+		} else {
+			currentOpen.addClass("instant");
+			let instantCollapseClear = function () {
+				currentOpen.removeClass("instant");
+				location.href = href;
+				window.scrollBy(0, -30);
+				currentOpen.off('hidden.bs.collapse', instantCollapseClear);
+			};
+			currentOpen.on("hidden.bs.collapse", instantCollapseClear);
+			targetElem.collapse('show');
+		}
+	}
+	return false;
+}
+
 
 $(function() {
 	if (navigator.userAgent.indexOf('Safari') != -1 &&
@@ -27,10 +71,12 @@ $(function() {
 		$("body").addClass("safari");
 	}
 
-	sidebarMenu = $('#sidebarMenu');
+	let idHash = window.location.hash;
+	goToSubHash(idHash);
 
 	init_subnavlinks(".nav-multiple .subnav .nav-link");
 	init_subnavs(".nav-multiple");
+	$('.calls_header').click(function () { openWithInstaClose($(this).attr("data-target"), "#" + $(this).attr('id')) });
 
 	$('#cog_gif').hover(checkCog).click(checkCog);
 	setTimeout(function() { gifPlaying = gifPlaying === 1 ? false : 1; idleCog() }, 4333);
@@ -42,34 +88,12 @@ function init_subnavlinks (selector) {
 	selection.click(function () {
 		let clicked = $(this);
 		let target = clicked.attr("data-target");
-		let targetElem = $(target);
-		let accordion = $(target).attr("data-parent");
-		let open = $(accordion + " .collapse.show");
-
-		if (open.length === 0) {
-			location.href = clicked.attr("href");
-			window.scrollBy(0, -30);
-			targetElem.collapse('show');
-		} else {
-			if(targetElem.hasClass("show")) { //already open
-				location.href = clicked.attr("href");
-				window.scrollBy(0, -30);
-			} else {
-				open.addClass("instant");
-				let instantCollapseClear = function () {
-					open.removeClass("instant");
-					location.href = clicked.attr("href");
-					window.scrollBy(0, -30);
-					open.off('hidden.bs.collapse', instantCollapseClear);
-				};
-				open.on("hidden.bs.collapse", instantCollapseClear);
-				targetElem.collapse('show');
-			}
-		}
-		return false;
+		let href = clicked.attr("href");
+		return openWithInstaClose(target, href);
 	});
 	return true;
 }
+
 function init_subnavs(selector) {
 	let selection = $(selector);
 	if (selection.length === 0) return false;
