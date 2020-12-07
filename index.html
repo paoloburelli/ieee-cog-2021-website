@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f9c92e">
+    <meta name="msapplication-navbutton-color" content="#f9c92e">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f9c92e">
+
+    <title lang="en">CoG 2021</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="alternate icon" href="assets/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav id="sidebarMenu" class="col-3 col-xl-2 d-lg-block sidebar collapse">
+        <div class="sidebar-sticky pt-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#introduction_section">
+                        introduction
+                    </a>
+                </li>
+                <li class="nav-item nav-multiple" data-target="calls_subnav">
+                    <a class="nav-link" href="#calls_section">
+                        + calls
+                    </a>
+                    <ul class="subnav collapse" data-ref="calls_subnav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#call_tutorials" data-toggle="collapse" aria-expanded="false" data-target="#call_tutorials_content">
+                                tutorials
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#call_competitions" data-toggle="collapse" data-target="#call_competitions_content">
+                                competitions
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#call_special" data-toggle="collapse" data-target="#call_special_content">
+                                special session proposals
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#call_papers" data-toggle="collapse" data-target="#call_papers_content">
+                                papers and presentations
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#committee_section">
+                        committee
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#calendar_section">
+                        calendar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sponsors_section">
+                        sponsors
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main">
+        <div id="title_section" class="section">
+            <img id="cog_gif" src="assets/cog_gif.gif" data-active="assets/cog_gif.gif" data-idle="assets/cog_gif_blink.gif" alt="A spinning cog">
+            <img id="title" src="assets/2021.svg" alt="CoG 2021">
+
+            <h2 id="subtitle">3rd IEEE Conference on&nbsp;<strong>Games</strong></h2>
+
+            <h3 id="dateplace"><mark>17&ndash;19 AUG</mark> <mark>IT&nbsp;University&nbsp;of&nbsp;Copenhagen</mark></h3>
+
+            <hr id="title_separator">
+        </div>
+
+        <div id="introduction_section" class="section">
+            <p>The Conference on Games (CoG) evolves from the traditional Computational Intelligence and Games (CIG) to bring together leading researchers and practitioners from academia and industry in the field of Games, to discuss recent advances and explore future directions.</p>
+            <p>Games offer a fantastic domain for computational creativity, design, technology, education, social sciences and, undoubtedly, artificial and computational intelligence. The annual IEEE Conference on Games (IEEE CoG) seeks to share insights and cutting-edge research related to game technologies and design, covering scientific, technical, and human aspects of games.</p>
+            <p>IEEE CoG 2021 will include presentations of peer-reviewed papers, invited talks by high-profile industry and academic leaders, panels, posters and demos. Furthermore, this year's edition will include two new forms of presentations:</p>
+
+            <ul class="dashed spaced">
+                <li>Presentations of abstract submissions, this submission will not be included in the proceedings of the conference;</li>
+                <li>Presentations of articles previously published in the IEEE Transactions on Games journal.</li>
+            </ul>
+
+            <p>We welcome papers and presentations related to all aspects of Games, including, but not limited to, the following broad subject areas:</p>
+
+            <p class="tags">
+                <mark>AI&nbsp;for&nbsp;Playing&nbsp;Games</mark>
+                <mark>Analytics&nbsp;and&nbsp;Player&nbsp;Modelling</mark>
+                <mark>Benchmarks&nbsp;and&nbsp;Competitions</mark>
+                <mark>Education&nbsp;and&nbsp;Games</mark>
+                <mark>Game&nbsp;Design</mark>
+                <mark>Game&nbsp;Interfaces&nbsp;and&nbsp;User&nbsp;Interaction</mark>
+                <mark>Game&nbsp;Theory&nbsp;and&nbsp;Multi&#8209;agent&nbsp;Systems</mark>
+                <mark>Multimedia&nbsp;and&nbsp;Games:&nbsp;Deep&nbsp;Learning&nbsp;Algorithms&nbsp; &nbsp;and&nbsp;Multimedia&nbsp;Technologies&nbsp;for&nbsp;Serious&nbsp;Games&nbsp;Applications</mark>
+                <mark>Narrative&nbsp;and&nbsp;Interactive&nbsp;Entertainment</mark>
+                <mark>PCG&nbsp;and&nbsp;AI&nbsp;for&nbsp;Game&nbsp;Design</mark>
+                <mark>Serious&nbsp;Games&nbsp;Technology</mark>
+                <mark>Virtual&nbsp;and&nbsp;Augmented&nbsp;Reality</mark>
+            </p>
+
+
+        </div>
+
+        <div id="calls_section" class="section dark_section" data-jq-clipthru="dark_section">
+            <div id="call_proposals">
+                <h4 class="section_title mark_aligned"><mark>Calls</mark></h4>
+
+                <div class="accordion" id="callsAccordion">
+                    <div>
+                        <h5 id="call_tutorials" class="calls_header mark_aligned" type="button" data-toggle="collapse" data-target="#call_tutorials_content" aria-expanded="false" aria-controls="call_tutorials_content">
+                            <mark>Call for Tutorials</mark>
+                        </h5>
+
+                        <div id="call_tutorials_content" class="calls_body collapse" aria-labelledby="call_tutorials" data-parent="#callsAccordion">
+                            <p>We invite submissions for tutorials to be held at IEEE CoG 2021. This is an opportunity for you to share your expertise and influence future research directions in the CoG community. Tutorials can be on any topic in the scope of the conference. Please note that the conference's scope includes all technical research areas as they intersect with games. We especially encourage tutorials that reflect and respond to this broader scope. For a partial list of topics relevant to the expanded scope of the conference, please visit Topics and Tracks</p>
+                            <p>Typically, tutorials are expected to run for 1.5 hours, but longer ones will also be considered. The format may be negotiated through the Tutorial Chairs.</p>
+                            <p>Proposals should include the following information:</p>
+                            <ul class="dashed spaced">
+                                <li>Title;</li>
+                                <li>Duration and logistical requirements;</li>
+                                <li>Outline of topic coverage and format of tutorial (less than 400 words in total);</li>
+                                <li>List of presenters with contact details and short biographical details (less than 150 words for each presenter);</li>
+                                <li>Links to the presenter/organizer web page or the tutorial page (optional).</li>
+                            </ul>
+                            <p>Proposals should be sent by email to the Tutorial Chairs by January 14th 2021 or sooner. Notification of acceptance will take place by February 12th.</p>
+                            <p>Email proposals and enquiries to both Tutorial Chairs: Jesper Juul (<a href="mailto:j@jesperjuul.net">j@jesperjuul.net</a>) and Sebastian Risi (<a href="mailto:sebr@itu.dk">sebr@itu.dk</a>).</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5 id="call_competitions" class="calls_header mark_aligned" type="button" data-toggle="collapse" data-target="#call_competitions_content" aria-expanded="false" aria-controls="call_competitions_content">
+                            <mark>Call for Competitions</mark>
+                        </h5>
+
+                        <div id="call_competitions_content" class="calls_body collapse" aria-labelledby="call_competitions" data-parent="#callsAccordion">
+
+
+                            <p>The CoG 2021 Organising Committee invites proposals for competitions to be held at the conference. These may be completely new ones or competitions held already in the last years, possibly at other venues. Proposals are due by January 14th 2021, and will be reviewed based on their relevance to the CoG community. Please see the topics covered by the CoG conference. Competitions can be based on well-known games as well, but competitions based on custom-made and lesser-known games are also welcome. The competition needs to define a set of rules and objectives for determining the score of each player.</p>
+                            <p>To submit your proposal, send an email with the title "CoG 2021 Competition Proposal" to the competition chairs Ruck Thawonmas (<a href="mailto:ruck@is.ritsumei.ac.jp">ruck@is.ritsumei.ac.jp</a>) and Antonios Liapis (<a href="mailto:antonios.liapis@um.edu.mt">antonios.liapis@um.edu.mt</a>).</p>
+                            <p>Please, include the following information with your proposal:</p>
+
+                            <ul class="dashed">
+                                <li>Organisers’ names;</li>
+                                <li>Competition title;</li>
+                                <li>Web address;</li>
+                                <li>Description of the competition (about 200 words);</li>
+                                <li>Whether the competition will have several tracks or not, and if they should be considered different competitions or a single one.</li>
+                            </ul>
+
+                            <p>Additionally, the following item can be submitted with the proposal or later:</p>
+
+                            <ul class="dashed">
+                                <li>Video of the competition/tracks (see below).</li>
+                            </ul>
+
+                            <p>Please, also note the following:</p>
+
+                            <ol class="spaced">
+                                <li>The IEEE CIS Student Game-Based Competition Sub-Committee (SGBC) has determined, in agreement with the Games TC meeting held at CIG 2017, that all competitions (including all tracks) must provide a short video for entrants. Competitions that do not provide this video will not be accepted at CoG 2021. However, submission of the video is not necessary for the proposal but can be deferred to after provisional acceptance of the competition. This requirement applies to both new and old competitions. The objective of creating these videos is to raise the general quality of our competitions and attract as many participants as possible by providing an easier start with the respective frameworks. The duration of the video is to be decided by the organizers, but it should have (English) subtitles to aid non-native English speakers. The content should demo concepts like how to install the required software packages, write an entry for the competition and submission instructions. The rationale is that if the whole process can be shown in less than 5 minutes, participants will feel more encouraged to participate and prepare a submission for the contest;</li>
+                                <li>We will of course provide certificates for all competitions and we will try to make some price money available, but we also encourage the organizers to look for financial sponsorship to make their competition more attractive;</li>
+                                <li>Competition papers. These are regular papers (up to 8 pages) that describe one or more entries to the competitions that are running at this year’s CIG. Competition papers need to include evaluation of the contribution, including (if possible) results on the same benchmark as that used by the competition, and comparison to other competition entries. Because the problem domain is well-known, these papers can be reviewed faster than regular papers. The same quality standards will apply to competition papers as to regular papers. Competition papers should be submitted by 28th May 2021. The competitions do not need to be accompanied by competition papers; a competition can run even in the absence of any submitted papers.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5 id="call_special" class="calls_header mark_aligned" type="button" data-toggle="collapse" data-target="#call_special_content" aria-expanded="false" aria-controls="call_special_content">
+                            <mark>Call for Special Session Proposals</mark>
+                        </h5>
+
+                        <div id="call_special_content" class="calls_body collapse" aria-labelledby="call_special" data-parent="#callsAccordion">
+                            <p>A special session addresses one or more topic areas within games research and is intended to bring together researchers working on those topics to provide an excellent session at the IEEE Conference on Games. Please read the call for papers for CoG 2021 and its list of topics before submitting your special session proposal.</p>
+                            <p>A special session proposal should not be more than two pages, not including the brief biographies of the proposers and the draft call for papers.</p>
+                            <p>Please include the following information with your proposal:</p>
+
+                            <ul class="dashed spaced">
+                                <li><strong>Title:</strong> the title of the proposal;</li>
+                                <li><strong>Description:</strong> a description of the topic of the session and its place in games research;</li>
+                                <li><strong>Example topics:</strong> a bullet list of topics that the session might cover;</li>
+                                <li><strong>Justification:</strong> a brief explanation making the case that the special session belongs in the conference. An estimate of the number of submissions should be included;</li>
+                                <li><strong>Sponsors:</strong> a list of researchers proposing the session. At least one must be an IEEE member and all sponsors are expected to serve as reviewers for the papers in the special session. If your session is accepted, you must also provide a list of reviewers sufficient to your expected submissions;</li>
+                                <li><strong>Sponsor Biographies:</strong> each sponsor should include a brief biography that demonstrates professional excellence and qualification to review for the special session. The bio should include a current e-mail address;</li>
+                                <li><strong>Draft Call for Papers:</strong> on its own page, a draft call for papers to be used in advertising the special session. The draft call for papers should not fill more than one page.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5 id="call_papers" class="calls_header mark_aligned" type="button" data-toggle="collapse" data-target="#call_papers_content" aria-expanded="false" aria-controls="call_papers_content">
+                            <mark>Call for Papers and Presentations</mark>
+                        </h5>
+
+                        <div id="call_papers_content" class="calls_body collapse" aria-labelledby="call_papers" data-parent="#callsAccordion">
+                            <h6><strong>Full papers.</strong> Deadline on April 9th 2021</h6>
+                            <p>Full papers have an 8 page limit (including references and appendices), and should constitute a technical or empirical contribution to scientific, technical, and human aspects of games.</p>
+                            <p>Full papers will be published by IEEE in the proceedings of the conference.</p>
+
+                            <h6><strong>Short, competition, vision and demo papers.</strong> Deadline on May 28th 2021</h6>
+                            <p><strong>Short papers</strong> (2-4 pages) describe work in progress, smaller projects that are not yet ready to be published as a full paper, or new progress on projects that have been reported elsewhere.</p>
+                            <p><strong>Competition papers</strong> (8 pages) describe research related to one of the competitions in the Games community, including the design of new competitions and in particular submissions to existing competitions.</p>
+                            <p><strong>Vision papers</strong> (8 pages) describe a vision for the future of the Games field or some part of it, are based on extensive research and include a comprehensive bibliography. Standards for competition papers are as high as for other CoG papers, and standards for vision papers are higher.</p>
+                            <p><strong>Demo papers</strong> (2 pages) describe work in progress and will be presented during a demo session.</p>
+                            <p>Short, competition, vision and demo papers, similarly to full papers, will be published by IEEE in the proceedings of the conference.</p>
+
+                            <h6><strong>Extended Abstracts.</strong> Deadline on May 28th 2021</h6>
+                            <p>This edition of IEEE CoG welcomes extended abstract submissions by researchers and practitioners to present their research findings. The extended abstract submission is intended to accommodate researchers who want to participate and share their findings at CoG but come from disciplines that traditionally do not publish their work in conference proceedings.</p>
+                            <p>Extended abstracts should be between 750 and 1500 words including references. Works submitted in this format will not be published in the conference proceedings.</p>
+
+                            <h6><strong>Journal Paper Presentations.</strong> Deadline on May 28th 2021</h6>
+                            <p>From this year, the IEEE CoG conference will welcome proposals for presentation of articles previously published in the IEEE Transactions on Games journal. For anyone interested in presenting their published work, you will need to submit a copy of the published paper in the appropriate track.</p>
+
+                            <h6><strong>Industry talks.</strong> Deadline on May 28th 2021</h6>
+                            <p>We welcome talk proposals from the games industry that wish to present their work on the areas covered in this conference. We are interested in presentations about research prototypes, commercial products, indie/mobile/AAA games, AR/VR applications, etc., as well as participation on poster sessions and discussion panels. From these talk proposals do not require the submission of a written manuscript to be accepted at the conference.</p>
+
+                            <p>All page/word limits include references and appendices. We plan to invite the principle authors to submit an extended version of their papers to the IEEE Transactions on Games (ToG). More details on this matter will be given later. All deadline times are anywhere on earth.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="committee_section" class="section wide-section">
+
+            <h4 class="mark_aligned"><mark>Organising committee</mark></h4>
+
+            <div id="committee_content" class="row">
+                <div class="col-md-6 col-12">
+                    <h5>General chairs</h5>
+                    <p><strong>Paolo&nbsp;Burelli</strong>, IT&nbsp;University&nbsp;Of&nbsp;Copenhagen</p>
+                    <p><strong>Miguel&nbsp;Sicart</strong>, IT&nbsp;University&nbsp;Of&nbsp;Copenhagen</p>
+
+                    <h5>Program chairs</h5>
+                    <p><strong>Rilla&nbsp;Khaled</strong>, Concordia&nbsp;University</p>
+                    <p><strong>Fotis&nbsp;Liarokapis</strong>, Masaryk&nbsp;University</p>
+                    <p><strong>Julian&nbsp;Togelius</strong>, New&nbsp;York&nbsp;University</p>
+
+                    <h5>Local chairs</h5>
+                    <p><strong>Djodrje&nbsp;Grbic</strong>, IT&nbsp;University&nbsp;Of&nbsp;Copenhagen</p>
+                    <p><strong>Hanna&nbsp;Wirman</strong>, IT&nbsp;University&nbsp;Of&nbsp;Copenhagen</p>
+
+                    <h5>Tutorial chairs</h5>
+                    <p><strong>Jesper&nbsp;Juul</strong>, The&nbsp;Royal&nbsp;Danish&nbsp;Academy&nbsp;of&nbsp;Fine&nbsp;Arts</p>
+                    <p><strong>Sebastian&nbsp;Risi</strong>, IT&nbsp;University&nbsp;Of&nbsp;Copenhagen</p>
+
+                    <h5>Keynote chairs</h5>
+                    <p><strong>Mike&nbsp;Cook</strong>, Queen&nbsp;Mary&nbsp;University&nbsp;Of&nbsp;London</p>
+                    <p><strong>Georgios&nbsp;Yannakakis</strong>, University&nbsp;of&nbsp;Malta</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h5>Competition chairs</h5>
+                    <p><strong>Ruck&nbsp;Thawonmas</strong>, Ritsumeikan&nbsp;University</p>
+                    <p><strong>Antonios&nbsp;Liapis</strong>, University&nbsp;Of&nbsp;Malta</p>
+
+                    <h5>Special session chairs</h5>
+                    <p><strong>Simon&nbsp;Lucas</strong>, Queen&nbsp;Mary&nbsp;University&nbsp;Of&nbsp;London</p>
+                    <p><strong>Yun-Gyung&nbsp;Cheong</strong>, Sungkyunkwan&nbsp;University</p>
+
+                    <h5>Financial chair</h5>
+                    <p><strong>Daniel&nbsp;Ashlock</strong>, University&nbsp;of&nbsp;Guelph</p>
+
+                    <h5>Proceedings chair</h5>
+                    <p><strong>Mike&nbsp;Preuss</strong>, Leiden&nbsp;University</p>
+
+                    <h5>Industry chairs</h5>
+                    <p><strong>Martin&nbsp;Pichlmair</strong>, IT&nbsp;University&nbsp;Of&nbsp;Copenhagen</p>
+                    <p><strong>Na'Tosha&nbsp;Bard</strong>, KMD</p>
+
+                    <h5>Publicity chairs</h5>
+                    <p><strong>Mads&nbsp;Johansen&nbsp;Lassen</strong>, IT&nbsp;University&nbsp;Of&nbsp;Copenhagen</p>
+                    <p><strong>Miruna&nbsp;Vozaru</strong>, IT&nbsp;University&nbsp;Of&nbsp;Copenhagen</p>
+                </div>
+                <p class="footnote">For more information, you can check us on Twitter <a href="https://twitter.com/ieee_cog">@ieee_cog</a> or contact <a href="mailto:pabu@itu.dk">Paolo Burelli</a> and <a href="mailto:miguel@itu.dk">Miguel Sicart</a></p>
+            </div>
+
+        </div>
+
+        <div id="calendar_section" class="section wide-section dark_section" data-jq-clipthru="dark_section">
+            <h4 class="mark_aligned"><mark>Calendar</mark></h4>
+            <div class="progress progress-bar-vertical">
+                <div id="dates_progress" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <span class="sr-only">30% Complete</span>
+                </div>
+            </div>
+
+            <div class="row dates_list">
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-01-15">
+                        <p>Jan 15</p>
+                    </div>
+                    <div class="event">
+                        <p>Tutorial/special session/competition proposal deadline</p>
+                    </div>
+                </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-04-09">
+                        <p>Apr 9</p>
+                    </div>
+                    <div class="event">
+                        <p>Full paper submission deadline</p>
+                    </div>
+                </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-05-17">
+                        <p>May 17</p>
+                    </div>
+                    <div class="event">
+                        <p>Notification of acceptance</p>
+                    </div>
+                </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-05-28">
+                        <p>May 28</p>
+                    </div>
+                    <div class="event">
+                        <p>Abstracts and auxiliary tracks paper submission deadline</p>
+                    </div>
+                </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-06-18">
+                        <p>Jun 18</p>
+                    </div>
+                    <div class="event">
+                        <p>Camera ready copy deadline</p>
+                    </div>
+                </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-06-18">
+                        <p>Jun 18</p>
+                    </div>
+                    <div class="event">
+                        <p>Early bird and author registration deadline</p>
+                    </div>
+                </div>
+                <div class="date_wrapper">
+                    <div class="bar_stroke"></div>
+                    <div class="date" data-date="2021-08-17">
+                        <p>Aug 17</p>
+                    </div>
+                    <div class="event">
+                        <p>Conference starts!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="sponsors_section" class="section">
+        </div>
+    </main>
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="progressbar.js"></script>
+</html>
