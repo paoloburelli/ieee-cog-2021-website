@@ -133,8 +133,8 @@ h4.mark_aligned, h5.mark_aligned {
 }
 
 h5 mark {
-    color: #35444a;
-    background-color: #eee9d9;
+    color: #eee9d9;
+    background-color: #404d53;
 }
 
 h5 mark:hover {
@@ -536,6 +536,21 @@ main {
 
 .date_wrapper.previous_date>.date>p:before {
     border-bottom: 1px solid #35444a;
+}
+
+.sponsor_logo {
+    display: inline-block;
+    margin: 1em;
+}
+
+.sponsor_logo img {
+    max-width: 90%;
+}
+
+blockquote {
+    background-color: #e3e0d5;
+    padding: 1em;
+    border-radius: 10px;
 }
 
 /*</editor-fold>*/
