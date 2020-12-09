@@ -553,4 +553,15 @@ blockquote {
     border-radius: 10px;
 }
 
+.prev_edition {
+    text-align: center;
+    display: inline-block;
+    padding: 1em;
+}
+
+.prev_edition a {
+    text-decoration: underline;
+    color: inherit;
+}
+
 /*</editor-fold>*/
