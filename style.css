@@ -82,6 +82,13 @@ p.tags mark:hover {
     background-color: #eddacc;
 }
 
+blockquote {
+    /*background-color: #eddacc;*/
+    background-color: #4d5e66;
+    /*color: #ed6d6f;*/
+    padding: 1em 2em;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: Roboto, sans-serif;
 }
@@ -133,8 +140,8 @@ h4.mark_aligned, h5.mark_aligned {
 }
 
 h5 mark {
-    color: #eee9d9;
-    background-color: #404d53;
+    color: #35444a;
+    background-color: #eee9d9;
 }
 
 h5 mark:hover {
@@ -179,12 +186,53 @@ h6 strong {
 /*<editor-fold desc="SIDEBAR">*/
 .sidebar {
     background-color: #f9c92e;
-    height: 100vh;
-    padding: 10rem 0 0 0;
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 0;
+    z-index: 1000;
+}
+
+#burgerMenuButton {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 6px;
+    margin-left: 4px;
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        height: 100vh;
+        padding: 10rem 0 0 0;
+    }
+    #burgerMenuButton {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    main {
+        margin-top: 46px;
+    }
+}
+
+#burgerMenuButton>.bar1, #burgerMenuButton>.bar2, #burgerMenuButton>.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+#burgerMenuButton.change>.bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+    transform: rotate(-45deg) translate(-9px, 7px);
+}
+
+#burgerMenuButton.change>.bar2 {opacity: 0;}
+
+#burgerMenuButton.change>.bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -7px);
+    transform: rotate(45deg) translate(-8px, -7px);
 }
 
 .nav-link {
@@ -251,8 +299,24 @@ main {
     min-height: 100vh;
 }
 
+.section.short_section {
+    min-height:0;
+}
+
+.section.dark_section {
+    background-color: #35444a;
+    color: #eee9d9;
+    z-index: 300;
+}
+
 #title_section {
     min-height: 0;
+}
+
+.section_separator {
+    width: 60%;
+    margin: -1px 0 0 20%;
+    border-top: 1px solid #ed6d6f;
 }
 
 @media screen and (min-width: 992px) {
@@ -261,8 +325,13 @@ main {
         padding-right: 41.667%;
     }
 
-    .wide-section {
+    .wide_section {
         padding-right: 33.333%;
+    }
+
+    .section_separator {
+        margin-left: 8.333%;
+        width: 50%;
     }
 }
 
@@ -275,8 +344,13 @@ main {
         padding-right: 33.333%;
     }
 
-    .wide-section {
+    .wide_section {
         padding-right: 25%;
+    }
+
+    .section_separator {
+        margin-left: 16.667%;
+        width: 41.667%;
     }
 }
 
@@ -290,8 +364,13 @@ main {
         padding-right: 8.333%;
     }
 
-    .wide-section {
+    .wide_section {
         padding-right: 8.333%;
+    }
+
+    .section_separator {
+        margin-left: 8.333%;
+        width: 83.333%;
     }
 }
 
@@ -308,22 +387,19 @@ main {
     #committee_section {
         padding-right: 6%;
     }
+
+    .section_separator {
+        margin-left: 6%;
+        width: 88%;
+    }
 }
 
-.dark_section {
-    background-color: #35444a;
-    color: #eee9d9;
-    z-index: 300;
-}
 /*</editor-fold>*/
 
 
 /* ----- SPECIFICS ----- */
 
 /*<editor-fold desc="SPECIFICS">*/
-#title_section {
-    padding-bottom: 0;
-}
 
 #cog_gif {
     height: 10rem;
@@ -345,12 +421,6 @@ main {
     line-height: 1.5em;
 }
 
-#title_separator {
-    width: 41.667%;
-    margin: 4em 0 0 0;
-    border-top: 1px solid #ed6d6f;
-}
-
 @media screen and (max-width: 700px) {
 
     #cog_gif {
@@ -362,11 +432,6 @@ main {
         height: 3.7rem;
         /*margin-bottom: 1rem;*/
         /*margin-top: .4rem;*/
-    }
-
-    #title_separator {
-        width: 80%;
-        margin: 3em 0 0 0;
     }
 
     #subtitle {
@@ -447,7 +512,7 @@ main {
 
 .progress-bar-vertical .progress-bar {
     width: 100%;
-    height: 0;
+    height: 100%;
     -webkit-transition: height 0.6s ease;
     -o-transition: height 0.6s ease;
     transition: height 0.6s ease;
@@ -547,12 +612,6 @@ main {
     max-width: 90%;
 }
 
-blockquote {
-    background-color: #e3e0d5;
-    padding: 1em;
-    border-radius: 10px;
-}
-
 .prev_edition {
     text-align: center;
     display: inline-block;
@@ -560,8 +619,13 @@ blockquote {
 }
 
 .prev_edition a {
-    text-decoration: underline;
+    font-weight: 600;
     color: inherit;
+}
+
+.prev_edition a:hover {
+    color: #ed6d6f;
+    text-decoration: underline;
 }
 
 /*</editor-fold>*/

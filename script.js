@@ -80,6 +80,16 @@ $(function() {
 
 	$('#cog_gif').hover(checkCog).click(checkCog);
 	setTimeout(function() { gifPlaying = gifPlaying === 1 ? false : 1; idleCog() }, 4333);
+
+	$('#burgerMenuButton').click(function () {
+		$(this).toggleClass("change");
+		$($(this).attr("data-target")).slideToggle(200);
+	});
+
+	$('.nav-link').click(function () {
+		$('#burgerMenuButton').removeClass("change");
+		$('#sidebarLinks').slideUp(200);
+	});
 });
 
 function init_subnavlinks (selector) {

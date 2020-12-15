@@ -21,8 +21,8 @@
 </head>
 <body>
 
-<nav id="sidebarMenu" class="col-3 col-xl-2 d-lg-block sidebar collapse">
-  <div class="sidebar-sticky pt-3">
+<nav id="sidebarMenu" class="col-12 col-xl-2 col-lg-3 sidebar">
+  <div id="sidebarLinks" class="sidebar-sticky pt-3 d-lg-block collapse">
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link active" href="#title_section">
@@ -83,6 +83,11 @@
       </li>
     </ul>
   </div>
+  <div id="burgerMenuButton" data-target="#sidebarLinks">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
 </nav>
 
 <main role="main">
@@ -99,8 +104,9 @@
       <mark>IT&nbsp;University&nbsp;of&nbsp;Copenhagen</mark>
     </h3>
 
-    <hr id="title_separator">
   </div>
+
+  <hr class="section_separator">
 
   <div id="introduction_section" class="section">
     <p>Games offer a fantastic domain for computational creativity, design, technology, education, social sciences and,
@@ -142,7 +148,7 @@
 
   </div>
 
-  <div id="calendar_section" class="section wide-section dark_section" data-jq-clipthru="dark_section">
+  <div id="calendar_section" class="section wide_section dark_section" data-jq-clipthru="dark_section">
     <h4 class="mark_aligned">
       <mark>Important Dates</mark>
     </h4>
@@ -220,7 +226,9 @@
     </div>
   </div>
 
-  <div id="calls_section" class="section wide_section">
+  <hr class="section_separator">
+
+  <div id="calls_section" class="section dark_section">
     <div id="call_proposals">
       <h4 class="section_title mark_aligned">
         <mark>Calls</mark>
@@ -431,7 +439,7 @@
     </div>
   </div>
 
-  <div id="committee_section" class="section dark_section" data-jq-clipthru="dark_section">
+  <div id="committee_section" class="section wide_section" data-jq-clipthru="dark_section">
 
     <h4 class="mark_aligned">
       <mark>Organising committee</mark>
@@ -490,13 +498,15 @@
 
   </div>
 
-  <div id="previous_section" class="section">
+  <div id="previous_section" class="section dark_section short_section">
     <h4 class="mark_aligned">
       <mark>Previous editions</mark>
     </h4>
     <div class="prev_edition"><a href="https://ieee-cog.org/2019" target="_blank"><img src="assets/cog_logo_small.png" alt="IEEE Conference on Games"><p>2019<p></a></div>
     <div class="prev_edition"><a href="https://ieee-cog.org/2020" target="_blank"><img src="assets/cog_logo_small.png" alt="IEEE Conference on Games"><p>2020<p></a></div>
   </div>
+
+  <hr class="section_separator">
 
   <div id="sponsors_section" class="section dark_section" data-jq-clipthru="dark_section">
     <h4 class="mark_aligned">
