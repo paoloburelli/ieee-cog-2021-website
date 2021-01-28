@@ -34,12 +34,12 @@ p strong, li strong {
     text-decoration: underline;
 }
 
-p>a {
+span>a, p>a {
     text-decoration: underline;
     color: inherit;
 }
 
-p>a:hover {
+span>a:hover, p>a:hover {
     color: #ed6d6f;
 }
 
@@ -82,9 +82,9 @@ p.tags mark:hover {
     background-color: #eddacc;
 }
 
-blockquote {
-    /*background-color: #eddacc;*/
-    background-color: #4d5e66;
+#call_papers_content blockquote {
+    background-color: #eddacc;
+    /*background-color: #4d5e66;*/
     /*color: #ed6d6f;*/
     padding: 1em 2em;
 }
@@ -317,6 +317,20 @@ main {
     width: 60%;
     margin: -1px 0 0 20%;
     border-top: 1px solid #ed6d6f;
+}
+
+.disabled_section {
+    margin-bottom: 1em;
+}
+
+.disabled_section h5{
+    display: inline;
+    text-decoration-line: line-through;
+    color: lightgray;
+}
+
+.disabled_section mark, .disabled_section mark:hover  {
+    color: lightgray;
 }
 
 @media screen and (min-width: 992px) {

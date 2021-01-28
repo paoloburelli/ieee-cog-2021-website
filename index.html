@@ -37,24 +37,22 @@
       </li>
 
       <li class="nav-item nav-multiple" data-target="calls_subnav">
-        <a class="nav-link" href="#calls_section">
+        <a class="nav-link" href="#call_papers">
           + calls
         </a>
         <ul class="subnav collapse" data-ref="calls_subnav">
           <li class="nav-item">
-            <a class="nav-link" href="#call_tutorials" data-toggle="collapse" aria-expanded="false"
-               data-target="#call_tutorials_content">
+            <a class="nav-link" href="#call_papers" data-toggle="collapse" data-target="#call_papers_content">
               tutorials
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#call_competitions" data-toggle="collapse"
-               data-target="#call_competitions_content">
+            <a class="nav-link" href="#call_papers" data-toggle="collapse" data-target="#call_papers_content">
               competitions
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#call_special" data-toggle="collapse" data-target="#call_special_content">
+            <a class="nav-link" href="#call_papers" data-toggle="collapse" data-target="#call_papers_content">
               special session proposals
             </a>
           </li>
@@ -66,6 +64,11 @@
         </ul>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="#competitions_section">
+          competitions
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="#committee_section">
           committee
@@ -132,16 +135,16 @@
 
     <p class="tags">
       <mark>AI&nbsp;for&nbsp;Playing&nbsp;Games</mark>
-      <mark>Analytics&nbsp;and&nbsp;Player&nbsp;Modelling</mark>
+      <mark>Analytics,&nbsp;Player&nbsp;Modelling and Player Psychology</mark>
+      <mark>Artificial Intelligence for Novel Game Interactions</mark>
       <mark>Benchmarks&nbsp;and&nbsp;Competitions</mark>
-      <mark>Education&nbsp;and&nbsp;Games</mark>
+      <mark>Game Studies and Game Culture</mark>
       <mark>Game&nbsp;Design</mark>
-      <mark>Game&nbsp;Interfaces&nbsp;and&nbsp;User&nbsp;Interaction</mark>
-      <mark>Game&nbsp;Theory&nbsp;and&nbsp;Multi&#8209;agent&nbsp;Systems</mark>
-      <mark>Multimedia&nbsp;and&nbsp;Games:&nbsp;Deep&nbsp;Learning&nbsp;Algorithms&nbsp; &nbsp;and&nbsp;Multimedia&nbsp;Technologies&nbsp;for&nbsp;Serious&nbsp;Games&nbsp;Applications</mark>
+      <mark>Game&nbsp;Human Computer Interaction</mark>
+      <mark>Game&nbsp;Theory&nbsp;and&nbsp;Multi-agent&nbsp;Systems</mark>
       <mark>Narrative&nbsp;and&nbsp;Interactive&nbsp;Entertainment</mark>
-      <mark>PCG&nbsp;and&nbsp;AI&nbsp;for&nbsp;Game&nbsp;Design</mark>
-      <mark>Serious&nbsp;Games&nbsp;Technology</mark>
+      <mark>Procedural Content Generation&nbsp;and&nbsp;AI&nbsp;for&nbsp;Game&nbsp;Design</mark>
+      <mark>Applications of Games and Game Technology</mark>
       <mark>Virtual&nbsp;and&nbsp;Augmented&nbsp;Reality</mark>
     </p>
 
@@ -228,14 +231,14 @@
 
   <hr class="section_separator">
 
-  <div id="calls_section" class="section dark_section">
+  <div id="calls_section" class="section wide_section">
     <div id="call_proposals">
       <h4 class="section_title mark_aligned">
         <mark>Calls</mark>
       </h4>
 
       <div class="accordion" id="callsAccordion">
-        <div>
+        <div class="disabled_section">
           <h5 id="call_tutorials" class="calls_header mark_aligned" type="button" data-toggle="collapse"
               data-target="#call_tutorials_content" aria-expanded="false" aria-controls="call_tutorials_content">
             <mark>Call for Tutorials</mark>
@@ -266,11 +269,12 @@
           </div>
         </div>
 
-        <div>
+        <div class="disabled_section">
           <h5 id="call_competitions" class="calls_header mark_aligned" type="button" data-toggle="collapse"
               data-target="#call_competitions_content" aria-expanded="false" aria-controls="call_competitions_content">
             <mark>Call for Competitions</mark>
           </h5>
+          <span>(Check the <a href="#competitions_section">Competitions</a> section for the list of competitions)</span>
 
           <div id="call_competitions_content" class="calls_body collapse" aria-labelledby="call_competitions"
                data-parent="#callsAccordion">
@@ -339,7 +343,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="disabled_section">
           <h5 id="call_special" class="calls_header mark_aligned" type="button" data-toggle="collapse"
               data-target="#call_special_content" aria-expanded="false" aria-controls="call_special_content">
             <mark>Call for Special Session Proposals</mark>
@@ -382,11 +386,11 @@
 
         <div>
           <h5 id="call_papers" class="calls_header mark_aligned" type="button" data-toggle="collapse"
-              data-target="#call_papers_content" aria-expanded="false" aria-controls="call_papers_content">
+              data-target="#call_papers_content" aria-expanded="true" aria-controls="call_papers_content">
             <mark>Call for Papers and Presentations</mark>
           </h5>
 
-          <div id="call_papers_content" class="calls_body collapse" aria-labelledby="call_papers"
+          <div id="call_papers_content" class="calls_body" aria-labelledby="call_papers"
                data-parent="#callsAccordion">
             <h6><strong>Full papers.</strong> Deadline on April 9th 2021</h6>
             <p>Full papers have an 8 page limit (including references and appendices), and should constitute a technical
@@ -440,7 +444,15 @@
     </div>
   </div>
 
-  <div id="committee_section" class="section wide_section" data-jq-clipthru="dark_section">
+  <div id="competitions_section" class="section wide_section dark_section" data-jq-clipthru="dark_section">
+
+    <h4 class="mark_aligned">
+      <mark>Competitions</mark>
+    </h4>
+
+  </div>
+
+  <div id="committee_section" class="section wide_section">
 
     <h4 class="mark_aligned">
       <mark>Organising committee</mark>
@@ -499,7 +511,7 @@
 
   </div>
 
-  <div id="previous_section" class="section dark_section short_section">
+  <div id="previous_section" class="section dark_section wide_section" data-jq-clipthru="dark_section">
     <h4 class="mark_aligned">
       <mark>Previous editions</mark>
     </h4>
@@ -513,9 +525,8 @@
       <p></a></div>
   </div>
 
-  <hr class="section_separator">
 
-  <div id="sponsors_section" class="section dark_section" data-jq-clipthru="dark_section">
+  <div id="sponsors_section" class="section wide_section">
     <h4 class="mark_aligned">
       <mark>Sponsors</mark>
     </h4>
