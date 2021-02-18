@@ -18,6 +18,7 @@ body {
     color: #35444a;
     font-family: Fira Sans, sans-serif;
 }
+
 /*</editor-fold>*/
 
 
@@ -34,12 +35,16 @@ p strong, li strong {
     text-decoration: underline;
 }
 
-span>a, p>a {
+a {
+    word-wrap: break-word;
+}
+
+span > a, p > a {
     text-decoration: underline;
     color: inherit;
 }
 
-span>a:hover, p>a:hover {
+span > a:hover, p > a:hover {
     color: #ed6d6f;
 }
 
@@ -178,6 +183,7 @@ h6 strong {
         font-size: 1.1em;
     }
 }
+
 /*</editor-fold>*/
 
 
@@ -204,6 +210,7 @@ h6 strong {
         height: 100vh;
         padding: 10rem 0 0 0;
     }
+
     #burgerMenuButton {
         display: none;
     }
@@ -215,7 +222,7 @@ h6 strong {
     }
 }
 
-#burgerMenuButton>.bar1, #burgerMenuButton>.bar2, #burgerMenuButton>.bar3 {
+#burgerMenuButton > .bar1, #burgerMenuButton > .bar2, #burgerMenuButton > .bar3 {
     width: 35px;
     height: 5px;
     background-color: #333;
@@ -223,14 +230,16 @@ h6 strong {
     transition: 0.4s;
 }
 
-#burgerMenuButton.change>.bar1 {
+#burgerMenuButton.change > .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 7px);
     transform: rotate(-45deg) translate(-9px, 7px);
 }
 
-#burgerMenuButton.change>.bar2 {opacity: 0;}
+#burgerMenuButton.change > .bar2 {
+    opacity: 0;
+}
 
-#burgerMenuButton.change>.bar3 {
+#burgerMenuButton.change > .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -7px);
     transform: rotate(45deg) translate(-8px, -7px);
 }
@@ -300,7 +309,7 @@ main {
 }
 
 .section.short_section {
-    min-height:0;
+    min-height: 0;
 }
 
 .section.dark_section {
@@ -323,13 +332,13 @@ main {
     margin-bottom: 1em;
 }
 
-.disabled_section h5{
+.disabled_section h5 {
     display: inline;
     text-decoration-line: line-through;
     color: lightgray;
 }
 
-.disabled_section mark, .disabled_section mark:hover  {
+.disabled_section mark, .disabled_section mark:hover {
     color: lightgray;
 }
 
@@ -453,24 +462,23 @@ main {
     }
 }
 
-.calls_body p+h6 {
+.calls_body p + h6 {
     margin-top: 1.5em;
 }
 
-.calls_body>*:last-child {
+.calls_body > *:last-child {
     margin-bottom: 6rem;
 }
 
-.calls_header>mark:before {
-    content:"+";
+.calls_header > mark:before {
+    content: "+";
     margin-right: .24em;
 }
 
-.calls_header[aria-expanded="true"]>mark:before {
+.calls_header[aria-expanded="true"] > mark:before {
     content: "\2013";
     margin-right: .153em;
 }
-
 
 
 /*.collapsing {*/
@@ -550,16 +558,16 @@ main {
     width: 100%;
 }
 
-.date_wrapper>.date, .date_wrapper>.event{
+.date_wrapper > .date, .date_wrapper > .event {
     vertical-align: bottom;
     align-self: flex-end;
 }
 
-.date_wrapper>.date>p, .date_wrapper>.event>p {
+.date_wrapper > .date > p, .date_wrapper > .event > p {
     margin-bottom: 0;
 }
 
-.date_wrapper>.date>p:before {
+.date_wrapper > .date > p:before {
     content: "";
     margin-right: 2em;
     margin-left: -2.999em;
@@ -569,51 +577,55 @@ main {
     width: 1em;
 }
 
-.date_wrapper>.date {
+.date_wrapper > .date {
     width: 30%;
 }
-.date_wrapper>.event {
+
+.date_wrapper > .event {
     width: 70%;
     align-self: flex-start;
     margin-top: 3.4em;
 }
 
 @media screen and (min-width: 500px) {
-    .date_wrapper>.date {
+    .date_wrapper > .date {
         width: 20%;
     }
-    .date_wrapper>.event {
+
+    .date_wrapper > .event {
         width: 80%;
     }
 }
 
 @media screen and (min-width: 992px) {
-    .date_wrapper>.date {
+    .date_wrapper > .date {
         width: 15%;
     }
-    .date_wrapper>.event {
+
+    .date_wrapper > .event {
         width: 85%;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .date_wrapper>.date {
+    .date_wrapper > .date {
         width: 10%;
     }
-    .date_wrapper>.event {
+
+    .date_wrapper > .event {
         width: 90%;
     }
 }
 
-.date_wrapper.previous_date>.date>p, .date_wrapper.previous_date>.event>p {
+.date_wrapper.previous_date > .date > p, .date_wrapper.previous_date > .event > p {
     color: #596468;
 }
 
-.date_wrapper.current_date>.date>p, .date_wrapper.current_date>.event>p {
+.date_wrapper.current_date > .date > p, .date_wrapper.current_date > .event > p {
     color: #f9c92e;
 }
 
-.date_wrapper.previous_date>.date>p:before {
+.date_wrapper.previous_date > .date > p:before {
     border-bottom: 1px solid #35444a;
 }
 
