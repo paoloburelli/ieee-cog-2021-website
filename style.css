@@ -654,4 +654,9 @@ main {
     text-decoration: underline;
 }
 
+.news {
+    background-color:#f9c92e;
+    padding: 10px;
+}
+
 /*</editor-fold>*/
