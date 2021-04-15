@@ -659,4 +659,18 @@ main {
     padding: 10px;
 }
 
+.sponsorship_table {
+    margin-top: 1em;
+    background-color: #eee9d9;
+    color: #404d53;
+}
+
+.sponsorship_table tr {
+    border-bottom: #404d53 1px solid;
+}
+
+.sponsorship_table th {
+    padding: 20px;
+}
+
 /*</editor-fold>*/
