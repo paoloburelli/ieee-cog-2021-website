@@ -674,4 +674,19 @@ main {
     padding: 20px;
 }
 
+.registration_table {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #404d53;
+    color: #eee9d9;
+}
+
+.registration_table tr {
+    border-bottom: #eee9d9 1px solid;
+}
+
+.registration_table th {
+    padding: 20px;
+}
+
 /*</editor-fold>*/
