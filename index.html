@@ -1179,13 +1179,18 @@
     <h4 class="mark_aligned">
       <mark>Sponsors</mark>
     </h4>
-    <div>
+    <div id="sponsors_hidden_by_an_extension">
       <script type="text/javascript">
         window.adBlockRunning = function() {
             return (getComputedStyle(document.getElementById("detect"))["display"] == "none") ? true : false;
           }()
 
-        console.log(window.adBlockRunning);
+        // console.log(window.adBlockRunning);
+        if(window.adBlockRunning)
+        {
+          document.getElementById("sponsors_hidden_by_an_extension").innerHTML += 
+              "<h3>Please disable Adblock on this site to see our list of Sponsors and Patrons.</h3>";
+        }
       </script>
     </div>
     <div class="sponsor_logo">
