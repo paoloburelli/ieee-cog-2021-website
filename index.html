@@ -1174,11 +1174,20 @@
       <p></a></div>
   </div>
 
-
+  <div id="detect" class="ads ad adsbox doubleclick ad-placement carbon-ads"><!-- DETECT ADBLOCK, TO SHOW ALT TEXT --></div>
   <div id="sponsors_section" class="section wide_section">
     <h4 class="mark_aligned">
       <mark>Sponsors</mark>
     </h4>
+    <div>
+      <script type="text/javascript">
+        window.adBlockRunning = function() {
+            return (getComputedStyle(document.getElementById("detect"))["display"] == "none") ? true : false;
+          }()
+
+        console.log(window.adBlockRunning);
+      </script>
+    </div>
     <div class="sponsor_logo">
       <a href="https://cis.ieee.org" target="_blank"><img src="assets/cis_logo.png"
                                                           alt="IEEE Computational Intelligence Society Website" /></a>

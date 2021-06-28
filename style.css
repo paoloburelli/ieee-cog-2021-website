@@ -660,6 +660,14 @@ main {
     margin-bottom: 1em;
 }
 
+#detect {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  left: -999em;
+  top: -999em
+}
+
 .sponsorship_table {
     margin-top: 1em;
     background-color: #eee9d9;
