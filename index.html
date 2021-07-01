@@ -1201,7 +1201,10 @@
 
         function testImage(url) {
             var tester = new Image();
-            tester.addEventListener('error', function(){ console.log(url+" not found!"); });
+            tester.addEventListener('error', function(){ 
+              console.log(url+" not found! Trying to reload!"); 
+              tester.src = url;
+            });
             tester.src = url;
         }
 
