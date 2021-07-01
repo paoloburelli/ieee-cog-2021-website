@@ -1198,6 +1198,23 @@
           document.getElementById("sponsors_hidden_by_an_extension").innerHTML += 
               "<h3>Please disable any Content blockers if our list of Sponsors and Patrons is not displaying properly.</h3>";
         }
+
+        function testImage(url) {
+            var tester = new Image();
+            tester.addEventListener('error', function(){ console.log(url+" not found!"); });
+            tester.src = url;
+        }
+
+
+        testImage("assets/cis_logo.png");
+        testImage("assets/itu_logo.jpg");
+        testImage("assets/patrons/nethone.png");
+        testImage("assets/patrons/daftmobile.png");
+        testImage("assets/patrons/modl.ai.png");
+        testImage("assets/patrons/tripletopping.png");
+        testImage("assets/patrons/king.png");
+        testImage("assets/patrons/kmd.png");
+
       </script>
     </div>
     <div class="sponsor_logo">
