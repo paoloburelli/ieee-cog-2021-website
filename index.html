@@ -1206,10 +1206,12 @@
               tester.src = url;
             });
             tester.src = url;
+
+            return tester;
         }
 
 
-        testImage("assets/cis_logo.png");
+        //testImage("assets/cis_logo.png");
         testImage("assets/itu_logo.jpg");
         testImage("assets/patrons/nethone.png");
         testImage("assets/patrons/daftmobile.png");
@@ -1221,49 +1223,108 @@
       </script>
     </div>
     <div class="sponsor_logo">
-      <a href="https://cis.ieee.org" target="_blank"><img src="assets/cis_logo.png"
-                                                          alt="IEEE Computational Intelligence Society Website" /></a>
+      <a href="https://cis.ieee.org" target="_blank" id="cis_logo">
+        <script>
+          var img = testImage("assets/cis_logo.png");
+          img.alt = "IEEE Computational Intelligence Society Website";
+          document.getElementById("cis_logo").appendChild(img);
+        </script>
+        <!-- <img src="assets/cis_logo.png" alt="IEEE Computational Intelligence Society Website" /> -->
+      </a>
     </div>
     <h4 class="mark_aligned">
       <mark>Patrons</mark>
     </h4>
     <div class="sponsor_logo">
-      <a href="https://www.itu.dk" target="_blank"><img src="assets/itu_logo.jpg"
-                                                        alt="IT University Of Copenhagen Website" /></a>
+      <a href="https://www.itu.dk" target="_blank" id="itu_logo">
+        <script>
+          var img = testImage("assets/itu_logo.jpg");
+          img.alt = "IT University Of Copenhagen Website";
+          document.getElementById("itu_logo").appendChild(img);
+        </script>
+        <!-- <img src="assets/itu_logo.jpg" alt="IT University Of Copenhagen Website" /> -->
+      </a>
     </div>
     <div class="sponsor_logo">
-      <a href="https://nethone.com" target="_blank"><img src="assets/patrons/nethone.png"
-                                                         alt="Nethone" /></a>
-    </div>
-
-    <div class="sponsor_logo">
-      <a href="https://daftmobile.com" target="_blank"><img src="assets/patrons/daftmobile.png"
-                                                            alt="daftmobile" /></a>
-    </div>
-
-    <div class="sponsor_logo">
-      <a href="https://www.playtika.com" target="_blank"><img src="assets/patrons/playtika.png"
-                                                              alt="Playtika" /></a>
-    </div>
-
-    <div class="sponsor_logo">
-      <a href="https://www.king.com" target="_blank"><img src="assets/patrons/king.png"
-                                                          alt="King" /></a>
+      <a href="https://nethone.com" target="_blank" id="nethone_logo">
+        <script>
+          var img = testImage("assets/patrons/nethone.png");
+          img.alt = "Nethone Website";
+          document.getElementById("nethone_logo").appendChild(img);
+        </script>
+        <!-- <img src="assets/patrons/nethone.png" alt="Nethone" /> -->
+      </a>
     </div>
 
     <div class="sponsor_logo">
-      <a href="https://www.kmd.dk" target="_blank"><img src="assets/patrons/kmd.png"
-                                                        alt="KMD" /></a>
+      <a href="https://daftmobile.com" target="_blank" id="daftmobile_logo">
+        <script>
+          var img = testImage("assets/patrons/daftmobile.png");
+          img.alt = "daftmobile Website";
+          document.getElementById("daftmobile_logo").appendChild(img);
+        </script>
+        <!-- <img src="assets/patrons/daftmobile.png" alt="daftmobile" /> -->
+      </a>
     </div>
 
     <div class="sponsor_logo">
-      <a href="https://modl.ai" target="_blank"><img src="assets/patrons/modl.ai.png"
-                                                     alt="modl.ai" /></a>
+      <a href="https://www.playtika.com" target="_blank" id="Playtika_logo">
+        <script>
+          var img = testImage("assets/patrons/playtika.png");
+          img.alt = "Playtika Website";
+          document.getElementById("Playtika_logo").appendChild(img);
+        </script>
+
+        <!-- <img src="assets/patrons/playtika.png" alt="Playtika" /> -->
+      </a>
     </div>
 
     <div class="sponsor_logo">
-      <a href="https://tripletopping.com" target="_blank"><img src="assets/patrons/tripletopping.png"
-                                                               alt="Triple Topping Games" /></a>
+      <a href="https://www.king.com" target="_blank" id="King_logo">
+        <script>
+          var img = testImage("assets/patrons/king.png");
+          img.alt = "King Website";
+          document.getElementById("King_logo").appendChild(img);
+        </script>
+
+<!--         <img src="assets/patrons/king.png" alt="King" /> -->
+      </a>
+    </div>
+
+    <div class="sponsor_logo">
+      <a href="https://www.kmd.dk" target="_blank" id="KMD_logo">
+        <script>
+          var img = testImage("assets/patrons/kmd.png");
+          img.alt = "KMD Website";
+          document.getElementById("KMD_logo").appendChild(img);
+        </script>
+
+        <!-- <img src="assets/patrons/kmd.png" alt="KMD" /> -->
+      </a>
+    </div>
+
+    <div class="sponsor_logo">
+      <a href="https://modl.ai" target="_blank" id="modl.ai_logo">
+        <script>
+          var img = testImage("assets/patrons/modl.ai.png");
+          img.alt = "modl.ai Website";
+          document.getElementById("modl.ai_logo").appendChild(img);
+        </script>
+
+        <!-- <img src="assets/patrons/modl.ai.png" alt="modl.ai" /> -->
+      </a>
+    </div>
+
+    <div class="sponsor_logo">
+      <a href="https://tripletopping.com" target="_blank" id="tripletopping_logo">
+        <script>
+          var img = testImage("assets/patrons/tripletopping.png");
+          img.alt = "Triple Topping Games Website";
+          document.getElementById("tripletopping_logo").appendChild(img);
+        </script>
+
+        <!-- <img src="assets/patrons/tripletopping.png" alt="Triple Topping Games" /> -->
+      </a>
     </div>
   </div>
 
