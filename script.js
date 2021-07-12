@@ -1,31 +1,31 @@
-let gifPlaying = 1;
-
-function startCog() {
-	document.getElementById('cog_gif').src=$("#cog_gif").attr("data-active");
-}
-
-function idleCog() {
-	document.getElementById('cog_gif').src=$("#cog_gif").attr("data-idle");
-}
-
-function checkCog() {
-	if(gifPlaying) return;
-	let id = Math.random();
-	gifPlaying = id;
-	startCog();
-	setTimeout(function() {
-		gifPlaying = (gifPlaying === id ? false : id);
-		idleCog()
-	}, 4333);
-}
-
-function attempt(action, delay, attempts) {
-	if(attempts <= 0) return;
-	if(action() === false) {
-		setTimeout(function() {attempt(action, delay, --attempts);}, delay);
-	}
-}
-
+// let gifPlaying = 1;
+//
+// function startCog() {
+// 	document.getElementById('cog_gif').src=$("#cog_gif").attr("data-active");
+// }
+//
+// function idleCog() {
+// 	document.getElementById('cog_gif').src=$("#cog_gif").attr("data-idle");
+// }
+//
+// function checkCog() {
+// 	if(gifPlaying) return;
+// 	let id = Math.random();
+// 	gifPlaying = id;
+// 	startCog();
+// 	setTimeout(function() {
+// 		gifPlaying = (gifPlaying === id ? false : id);
+// 		idleCog()
+// 	}, 4333);
+// }
+//
+// function attempt(action, delay, attempts) {
+// 	if(attempts <= 0) return;
+// 	if(action() === false) {
+// 		setTimeout(function() {attempt(action, delay, --attempts);}, delay);
+// 	}
+// }
+//
 function goToSubHash(id) {
 	let elem = $(id);
 	if(elem.attr("data-toggle") === "collapse") {
